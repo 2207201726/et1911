@@ -4,4 +4,14 @@
   <artifactId>et1911</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  <modules>
+  	<module>spring-ioc-review</module>
+  </modules>
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>5.2.2.RELEASE</version>
+  	</dependency>
+  </dependencies>
 </project>
