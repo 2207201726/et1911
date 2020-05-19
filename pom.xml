@@ -10,6 +10,7 @@
 		<module>springmvc-01-hello</module>
 		<module>springmvc-02</module>
     <module>springmvc-03</module>
+    <module>springmvc-04-param</module>
   </modules>
 	<!--作用：声明依赖（管理依赖），但是不引入依赖，由子工程决定自己需要的依赖 -->
 	<dependencyManagement>
