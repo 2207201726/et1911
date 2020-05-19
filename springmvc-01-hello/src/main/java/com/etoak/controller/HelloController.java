@@ -17,7 +17,6 @@ public class HelloController implements HttpRequestHandler {
 		System.out.println("param name - " + name);
 		request.setAttribute("result", "Hello"+name);
 		request.getRequestDispatcher("/hello.jsp").forward(request, response);
-		
 	}
 
 }
