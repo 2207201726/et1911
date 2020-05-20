@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.0.xsd
+		http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
+
+	<context:component-scan base-package="com.etoak">
+		<context:include-filter type="annotation" 
+		expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" 
+		expression="org.springframework.web.bind.annotation.RestController"/>
+	</context:component-scan>
+	<mvc:annotation-driven></mvc:annotation-driven>
+	
+	<mvc:default-servlet-handler/>
+	
+	<bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
+		<property name="prefix" value="/templates/"/>
+		<property name="suffix" value=".html"/>
+		<property name="characterEncoding" value="UTF-8"/>
+		<property name="templateMode" value="HTML"/>
+		<property name="cacheable" value="false"></property>
+	</bean>
+	<bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
+		<property name="templateResolver" ref="templateResolver"/>
+	</bean>
+	<bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
+		<property name="templateEngine" ref="templateEngine"/>
+		<property name="characterEncoding" value="UTF-8"/>
+			
+	</bean>
+</beans>
