@@ -1,28 +1,39 @@
 <?xml version="1.0"?>
-<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.etoak.et1911</groupId>
-    <artifactId>et1911</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-  </parent>
-  <artifactId>springmvc-04-param</artifactId>
-  <packaging>war</packaging>
-  <name>springmvc-04-param Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <dependencies>
-   	<dependency>
-   		<groupId>javax.servlet</groupId>
-   		<artifactId>javax.servlet-api</artifactId>
-   		<scope>provided</scope>
-   	</dependency>
-   	<dependency>
-   		<groupId>org.springframework</groupId>
-   		<artifactId>spring-webmvc</artifactId>
-   	</dependency>
-  </dependencies>
-  <build>
-    <finalName>springmvc-04-param</finalName>
-  </build>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.etoak.et1911</groupId>
+		<artifactId>et1911</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<artifactId>springmvc-04-param</artifactId>
+	<packaging>war</packaging>
+	<name>springmvc-04-param Maven Webapp</name>
+	<url>http://maven.apache.org</url>
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>		
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>springmvc-04-param</finalName>
+	</build>
 </project>
